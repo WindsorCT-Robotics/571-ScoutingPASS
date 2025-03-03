@@ -107,7 +107,7 @@ var config_data = `
       "type": "counter"
     },
     { "name": "Coral<br>Pickup From",
-      "code": "tpu",
+      "code": "cpu",
       "type": "radio",
       "choices": {
         "s": "Coral Station<br>",
@@ -118,7 +118,7 @@ var config_data = `
       "defaultValue": "x"
     },
     { "name": "Algae<br>Pickup From",
-      "code": "tpu",
+      "code": "apu",
       "type": "radio",
       "choices": {
         "r": "Reef<br>",
@@ -210,7 +210,8 @@ var config_data = `
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 55
+      "maxSize": 55,
+      "defaultValue":" "
     }
   ]
 }`;

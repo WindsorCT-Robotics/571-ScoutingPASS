@@ -2,24 +2,14 @@ var config_data = `
 {
   "dataFormat": "tsv",
   "title": "Scouting PASS 2025",
-  "page_title": "REEFSCAPE",
+  "page_title": "571 Scouting<br>Reefscape",
   "pitConfig": "true",
   "prematch": [
     { "name": "Team Number",
       "code": "t",
       "type": "number"
     },
-    { "name": "Width",
-      "code": "wid",
-      "type": "number",
-      "defaultValue": "0"
-    },
-    { "name": "Weight",
-      "code": "wei",
-      "type": "number",
-      "defaultValue": "0"
-    },
-    { "name": "Drivetrain",
+    { "name": "Drivetrain Type",
       "code": "drv",
       "type": "radio",
       "choices": {
@@ -27,60 +17,78 @@ var config_data = `
         "w": "West Coast/Tank<br>",
         "b": "Butterfly/Grashopper<br>",
         "m": "Mechanum<br>",
-        "o": "Other"
+        "o": "Other Drivtrain (put in comments)"
       },
-      "defaultValue": "o"
+      "defaultValue": "s"
     },
-    { "name": "Other Drivetrain",
-      "code": "odt",
-      "type": "text",
-      "size": 20,
-      "maxSize": 50
-    },
-    { "name": "Swerve Ratio",
-      "code": "sr",
-      "type": "radio",
-      "choices": {
-        "1": "L1 (8.14:1)<br>",
-        "2": "L2 (6.75:1)<br>",
-        "3": "L3 (6.12:1)<br>",
-        "4": "L4 (5.14:1)<br>",
-        "o": "Other ratio (put in comments)<br>",
-        "x": "Not Swerve"
-      },
-      "defaultValue":"x"
-    },
-    { "name": "Drivetrain Motor",
-      "code": "mot",
-      "type": "radio",
-      "choices": {
-        "n": "Neo<br>",
-        "f": "Falcon<br>",
-        "c": "CIM<br>",
-        "x": "Other<br>"
-      },
-      "defaultValue":"x"
-    },
-    { "name": "# of Batteries",
-      "code": "nob",
-      "type": "number"
-    },
-    { "name": "Floor pickup Coral",
+    { "name": "Coral Pickup",
       "code": "fpu",
+      "type": "radio",
+      "choices": {
+        "s": "Coral Station<br>",
+        "f": "Floor<br>",
+        "b": "Both<br>",
+        "n": "Neither"
+      },
+      "defaultValue": "n"
+    },
+    { "name": "Coral Score L1",
+      "code": "cl1",
       "type": "bool"
     },
-    { "name": "Floor pickup Algae",
+    { "name": "Coral Score L2",
+      "code": "cl2",
+      "type": "bool"
+    },
+    { "name": "Coral Score L3",
+      "code": "cl3",
+      "type": "bool"
+    },
+    { "name": "Coral Score L4",
+      "code": "cl4",
+      "type": "bool"
+    },
+    { "name": "Remove Algae from Reef",
+      "code": "dc",
+      "type": "bool"
+    },
+    { "name": "Algae Pickup",
       "code": "fpa",
+      "type": "radio",
+      "choices": {
+        "r": "Reef<br>",
+        "f": "Floor<br>",
+        "b": "Both<br>",
+        "n": "Neither"
+      },
+      "defaultValue": "n"
+    },
+    { "name": "Algae Score Net",
+      "code": "an",
       "type": "bool"
     },
-    { "name": "Autos",
-      "code": "aut",
-      "type": "text",
-      "size": 20,
-      "maxSize": 250
+    { "name": "Algae Score Processor",
+      "code": "ap",
+      "type": "bool"
     },
-    { "name": "Scouting Method /<br>Program (ScoutingPASS?)",
-      "code": "sct",
+    { "name": "Shallow Climb",
+      "code": "sc",
+      "type": "bool"
+    },
+    { "name": "Deep Climb",
+      "code": "dc",
+      "type": "bool"
+    },
+    { "name": "Move During Auto",
+      "code": "mda",
+      "type": "bool"
+    },
+    { "name": "# of Coral Can Score During Auto",
+      "code": "csa",
+      "type": "counter"
+    },
+    { "name": "Other Features",
+      "code": "of",
       "type": "text",
       "size": 20,
       "maxSize": 250
